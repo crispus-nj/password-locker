@@ -13,7 +13,7 @@ class User:
         self.last_name = last_name
         self.username = username
         self.password = password
-        # User.user.append(self)
+        User.user.append(self)
 
     def generate_menu(self):
         '''
@@ -27,6 +27,7 @@ class User:
         print("4 - Display Accounts")
         print("5 - Delete an Account")
 
+
     def save_user(self):
         '''
         save user function will be saving the user to the user list
@@ -39,8 +40,19 @@ class User:
         '''
         User.user.remove(self)
 
+    @classmethod
+    def find_user_account(cls, username):
+        '''
+        '''
+        for name in User.user:
+            # print(name.username)
+            if name.username == username:
+                return username
+
+
 
 new_user = User("Crispus", "Njenga", "engineer", "1234")
-new_user.save_user()
+print(new_user.save_user())
 new_user.generate_menu()
+print(User.find_user_account("engineer"))
 # print(new_user.save_user())
