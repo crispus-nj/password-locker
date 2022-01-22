@@ -37,7 +37,7 @@ class Creditials:
             if user.username == name:
                 return user.password
             else :
-                error = f"No such {name} found!!"
+                error = f"No such username:({name}) found in the application. Please create an account\n"
                 return error
 
     @classmethod
@@ -47,7 +47,7 @@ class Creditials:
         it will take no arguement
         '''
         for account in User.disply_user_accounts():
-            print(f"first name: {account.first_name} \nLast name: {account.last_name} \nUsername: {account.username}")
+            print(f"first name: {account.first_name} \nLast name: {account.last_name} \nUsername: {account.username} \nPassword: {account.password}\n")
 
 
 # new_creditials = Creditials()

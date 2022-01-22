@@ -41,12 +41,13 @@ class User:
         save user function will be saving the user to the user list
         '''
         User.user.append(self)
-    
-    def delete_user_account(self):
+
+    @classmethod
+    def delete_user_account(cls):
         '''
         delete user account will perform deleting of a users account
         '''
-        User.user.remove(self)
+        User.user.remove(cls)
 
     @classmethod
     def find_user_account(cls, username):
@@ -70,7 +71,7 @@ class User:
         return User.user
 
 
-new_user = User("Crispus", "Njenga", "engineer", "1234")
+# new_user = User("Crispus", "Njenga", "engineer", "1234")
 # print(new_user.save_user())
 # new_user.generate_menu()
 # print(User.find_user_account("engineer"))
