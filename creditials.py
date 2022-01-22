@@ -20,7 +20,7 @@ class Creditials:
                 success = f"{username} have successfully logged in the application"
                 return success
             else :
-                error = f"No such username:({username}) found in the application or wrong password."
+                error = f"No such username:({username}) found in the application. Please create an account or check your password!"
                 return error    
         # print(User.disply_user_accounts())
 
