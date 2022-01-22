@@ -22,11 +22,11 @@ class User:
         print("\n")
         print("Welcome to Password Locker Applictation. \n")
         print("1 - Create an Account")
-        print("2 - Login to an Account")
+        print("2 - Login to your Account")
         print("3 - Display Account Username")
         print("4 - Display Accounts")
-        print("5 - Display Accounts")
-        print("6 - Display user password")
+        # print("5 - Display Accounts")
+        print("5 - Display user password")
 
 
     def save_user(self):
@@ -65,7 +65,7 @@ class User:
 
 new_user = User("Crispus", "Njenga", "engineer", "1234")
 # print(new_user.save_user())
-# new_user.generate_menu()
+new_user.generate_menu()
 # print(User.find_user_account("engineer"))
 # print(new_user.save_user())
 # print(User.disply_user_accounts())
