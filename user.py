@@ -14,7 +14,7 @@ class User:
         self.username = username
         self.password = password
         User.user.append(self)
-        
+
     @classmethod
     def generate_menu(cls):
         '''
@@ -27,6 +27,16 @@ class User:
         print("5 - Display user password")
         print("6 - About our Application")
 
+    @classmethod
+    def generate_menu_after_login(cls):
+        '''
+        generate menu after login will be responsible for displaying menu to the user after logging in.
+        '''
+        # print("1 - display password")
+        # print("2 - display username")
+        print("1 - Delete account")
+        print("2 - Display Account Details")
+        print("3 - Log Out")
 
     def save_user(self):
         '''
