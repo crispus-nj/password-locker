@@ -2,9 +2,12 @@ from user import User
 
 class Creditials:
     '''
+    Creditials class will perform function to do with authentication with the aid of data from the user class
     '''
-    allUser = User.user
     def __init__(self):
+        '''
+        constructor function used for testing purposes during development
+        '''
         pass
     
     def login(self, username: str, password):
@@ -35,7 +38,15 @@ class Creditials:
             else :
                 error = f"No such {name} found!!"
                 return error
-    
+
+    def generate_all_saved_accounts(self):
+        '''
+        generate all saved account function will be generating the credetials of the user.
+        it will take no arguement
+        '''
+        for account in User.disply_user_accounts():
+            print(f"first name: {account.first_name} \nLast name: {account.last_name} \nUsername: {account.username}")
+
 
 new_creditials = Creditials()
-print(new_creditials.login("engineer", "1234"))
+print(new_creditials.generate_all_saved_accounts())
