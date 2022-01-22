@@ -41,28 +41,41 @@ def main():
                     choice = int(input("Enter a value:\n"))
                     while True:
                         if choice == 1:
-                            pass
+                            new_user = User(username, password)
+                            new_user.delete_user_account()
+                            print("ACCOUNT DELETED SUCCESSFULLY!!")
+                            break
                         elif choice == 2:
-                            pass
+                            print("Details of the available users!!")
+                            Creditials.generate_all_saved_accounts()
+                            break
                         elif choice == 3:
                             User.generate_menu()
+                            choice = int(input("Enter a value:\n"))
 
                 else :
-                    print(f"No such username:({username}) found in the application. Please create an account or check your password!")
+                    print(f"No such username:({username}) found in the application. Please create an account or check your password!\n")
                     User.generate_menu()
                     choice = int(input("Enter a value:\n"))
 
         elif choice == 3:
             Creditials.generate_all_saved_accounts()
-            break
-
-        elif choice == 5:
-            print("This is a project which run on a terminal, where a user can create an account with a preferred a username. The application can display various saved accounts. And, lastly the user can delete the account.")
             while True:
                     User.generate_menu()
                     choice = int(input("Enter a value:\n"))
                     break
 
-                
+        elif choice == 4:
+            username = input("Enter your username\n")
+            Creditials.password_generate(username)
+
+        elif choice == 5:
+            print("\n")
+            print("This is a project which run on a terminal, where a user can create an account with a preferred a username. The application can display various saved accounts. And, lastly the user can delete the account.")
+            print("\n")
+            while True:
+                    User.generate_menu()
+                    choice = int(input("Enter a value:\n"))
+                    break          
 
 main()

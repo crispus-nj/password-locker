@@ -17,7 +17,7 @@ This is a project which run on a terminal, where a user can create an account wi
 * git clone git@github.com:engineer237/password-locker.git
 * cd password-locker or Open the folder (password-locker), 
 * open the terminal in linux distribution or open command prompt in windows.
-* Run python3.9 index.py.
+* Run python3.9 index.py
 ## Contacts
 Incase of any question or want to add some new features to the project. Contact me through the following to be added as a collaborator.
 
