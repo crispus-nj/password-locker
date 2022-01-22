@@ -1,2 +1,13 @@
+from user import user
+
 class Creditials:
-    pass
+    '''
+    '''
+    def login(self):
+        '''
+        '''
+        pass
+    def password_generate(self):
+        '''
+        '''
+        pass
