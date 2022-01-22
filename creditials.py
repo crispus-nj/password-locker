@@ -4,13 +4,21 @@ class Creditials:
     '''
     '''
     allUser = User.user
-    def __init__(self) -> None:
+    def __init__(self):
         pass
     
-    def login(self):
+    def login(self, username: str, password):
         '''
+        Login function will be used to authenticate the user. 
+        use the saved credials and allow the user to login the appliaction
         '''
-            
+        for user in User.disply_user_accounts():
+            if user.username == username and user.password == password:
+                success = f"{username} have successfully logged in the application"
+                return success
+            else :
+                error = f"No such username:({username}) found in the application or wrong password."
+                return error    
         # print(User.disply_user_accounts())
 
     def password_generate(self, name):
@@ -30,4 +38,4 @@ class Creditials:
     
 
 new_creditials = Creditials()
-print(new_creditials.password_generate("enginer"))
+print(new_creditials.login("engineer", "1234"))
