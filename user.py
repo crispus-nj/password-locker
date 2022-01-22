@@ -25,7 +25,8 @@ class User:
         print("2 - Login to an Account")
         print("3 - Display Account Username")
         print("4 - Display Accounts")
-        print("5 - Delete an Account")
+        print("5 - Display Accounts")
+        print("6 - Display user password")
 
 
     def save_user(self):
