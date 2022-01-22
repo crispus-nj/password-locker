@@ -23,9 +23,12 @@ def main():
             while True:
                 choice = int(input("Enter a value:\n"))
                 if choice == 1:
-                    pass
+                    new_user = User(first_name, last_name, username, password)
+                    new_user.delete_user_account()
+                    print("ACCOUNT DELETED SUCCESSFULLY!!")
                 elif choice == 2:
-                    pass
+                    print("Details of the available users!!")
+                    Creditials.generate_all_saved_accounts()
                 elif choice == 3:
                     exit()
                     # break
@@ -33,9 +36,6 @@ def main():
         elif choice == 2: 
             username = input("Enter your username\n")
             password = input("Enter your Your password\n")
-            # Creditials.login(username, password)
-            # print(username, password)
-            # user_account = User.find_user_account(username)
             for userData in User.disply_user_accounts():
                 print(username)
                 if userData.username == username and userData.password == password:
@@ -49,14 +49,14 @@ def main():
                             pass
                         elif choice == 3:
                             exit()
-                        
-                    # return Creditials.login(username, password)
                 else :
                     print(f"No such username:({username}) found in the application. Please create an account or check your password!")
                     User.generate_menu()
                     choice = int(input("Enter a value:\n"))
 
-            
+        elif choice == 3:
+            Creditials.generate_all_saved_accounts()
+            break
 
                 
 

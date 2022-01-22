@@ -40,7 +40,8 @@ class Creditials:
                 error = f"No such {name} found!!"
                 return error
 
-    def generate_all_saved_accounts(self):
+    @classmethod
+    def generate_all_saved_accounts(cls):
         '''
         generate all saved account function will be generating the credetials of the user.
         it will take no arguement
