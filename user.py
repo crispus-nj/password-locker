@@ -43,16 +43,28 @@ class User:
     @classmethod
     def find_user_account(cls, username):
         '''
+        find user function responsible for finding the user by username
+        Args:
+            username: name to search
+        Returns :
+            the username that matches the name
         '''
         for name in User.user:
             # print(name.username)
             if name.username == username:
                 return username
 
+    @classmethod
+    def disply_user_accounts(cls):
+        '''
+        display user accounts returns all the saved user accounts
+        '''
+        return User.user
 
 
 new_user = User("Crispus", "Njenga", "engineer", "1234")
-print(new_user.save_user())
-new_user.generate_menu()
-print(User.find_user_account("engineer"))
 # print(new_user.save_user())
+# new_user.generate_menu()
+# print(User.find_user_account("engineer"))
+# print(new_user.save_user())
+print(User.disply_user_accounts())
