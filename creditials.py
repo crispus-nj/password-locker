@@ -48,6 +48,6 @@ class Creditials:
             print(f"first name: {account.first_name} \nLast name: {account.last_name} \nUsername: {account.username}")
 
 
-new_creditials = Creditials()
-print(new_creditials.login("engineer", "123"))
-print(new_creditials.generate_all_saved_accounts())
+# new_creditials = Creditials()
+# print(new_creditials.login("engineer", "123"))
+# print(new_creditials.generate_all_saved_accounts())
