@@ -2,8 +2,6 @@ from user import User
 from creditials import Creditials
 
 def main():
-    # User("Crispus", "Njenga", "engineer", "1234")
-    # print(User.find_user_account("engineer"))
     print("\n")
     print("Welcome to Password Locker Applictation. \n")
     User.generate_menu()
@@ -30,9 +28,8 @@ def main():
                     print("Details of the available users!!")
                     Creditials.generate_all_saved_accounts()
                 elif choice == 3:
-                    exit()
-                    # break
-        
+                    User.generate_menu()
+
         elif choice == 2: 
             username = input("Enter your username\n")
             password = input("Enter your Your password\n")
@@ -48,7 +45,8 @@ def main():
                         elif choice == 2:
                             pass
                         elif choice == 3:
-                            exit()
+                            User.generate_menu()
+
                 else :
                     print(f"No such username:({username}) found in the application. Please create an account or check your password!")
                     User.generate_menu()
@@ -57,6 +55,13 @@ def main():
         elif choice == 3:
             Creditials.generate_all_saved_accounts()
             break
+
+        elif choice == 5:
+            print("This is a project which run on a terminal, where a user can create an account with a preferred a username. The application can display various saved accounts. And, lastly the user can delete the account.")
+            while True:
+                    User.generate_menu()
+                    choice = int(input("Enter a value:\n"))
+                    break
 
                 
 
