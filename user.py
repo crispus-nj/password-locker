@@ -2,14 +2,24 @@ class User:
     '''
     User class responsible for handling user functions
     '''
-    def __init__(self):
+    user = [] # where the user will be stored
+    
+    # constructor
+    def __init__(self, first_name : str, last_name : str, username : str, password : str):
         '''
         constructor function responsible for creation of all user instances
         '''
+        self.first_name = first_name
+        self.last_name = last_name
+        self.username = username
+        self.password = password
+        # User.user.append(self)
+
     def generate_menu(self):
         '''
         generate menu function is responsible for displaying menu to the user for any function the user is interested in.
         '''
+        print("\n")
         print("Welcome to Password Locker Applictation. \n")
         print("1 - Create an Account")
         print("2 - Login to an Account")
@@ -17,5 +27,20 @@ class User:
         print("4 - Display Accounts")
         print("5 - Delete an Account")
 
-new_user = User()
+    def save_user(self):
+        '''
+        save user function will be saving the user to the user list
+        '''
+        User.user.append(self)
+    
+    def delete_user_account(self):
+        '''
+        delete user account will perform deleting of a users account
+        '''
+        User.user.remove(self)
+
+
+new_user = User("Crispus", "Njenga", "engineer", "1234")
+new_user.save_user()
 new_user.generate_menu()
+# print(new_user.save_user())
