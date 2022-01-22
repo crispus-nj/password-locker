@@ -32,8 +32,6 @@ class User:
         '''
         generate menu after login will be responsible for displaying menu to the user after logging in.
         '''
-        # print("1 - display password")
-        # print("2 - display username")
         print("1 - Delete account")
         print("2 - Display Account Details")
         print("3 - Log Out")
@@ -72,7 +70,7 @@ class User:
         return User.user
 
 
-# new_user = User("Crispus", "Njenga", "engineer", "1234")
+new_user = User("Crispus", "Njenga", "engineer", "1234")
 # print(new_user.save_user())
 # new_user.generate_menu()
 # print(User.find_user_account("engineer"))

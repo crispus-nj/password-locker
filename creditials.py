@@ -10,7 +10,8 @@ class Creditials:
         '''
         pass
     
-    def login(self, username: str, password):
+    @classmethod
+    def login(cls, username: str, password):
         '''
         Login function will be used to authenticate the user. 
         use the saved credials and allow the user to login the appliaction
