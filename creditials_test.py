@@ -5,8 +5,9 @@ class TestCreditials(unittest.TestCase):
     '''
     '''
     def setUp(self):
-        pass
+        '''
+         Set up method to run before each test cases
+        '''
+        self.new_creditials = Creditials()
 
-    def tearDown(self):
-
-        pass
+   
