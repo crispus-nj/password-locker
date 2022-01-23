@@ -5,6 +5,9 @@ This is a project which run on a terminal, where a user can create an account wi
 ## User Story
 * A user can create an account.
 * A user can login an account using the creditials
+* view account data such as username, password, firstname and lastname
+* Delete an account
+* Close the application
 ## Features
 1. Create an Account.
 2. Login to the Account.
