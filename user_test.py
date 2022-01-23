@@ -42,7 +42,7 @@ class TestUser(unittest.TestCase):
         another_user.save_user()
 
         find_user = User.find_user_account("tm")
-        # print(find_user, another_user.username)
+        print(find_user, another_user.username)
         self.assertEqual(find_user, another_user.username)
 
 
