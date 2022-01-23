@@ -47,7 +47,7 @@ class User:
         '''
         delete user account will perform deleting of a users account
         '''
-        User.user.remove(cls)
+        User.user.clear()
 
     @classmethod
     def find_user_account(cls, username):

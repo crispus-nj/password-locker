@@ -1,6 +1,9 @@
 from user import User
 from creditials import Creditials
 
+new_user1 = User.user
+
+
 def user_instance():
     '''
     user_instance function will create an instance of user. when a user creates an account this function saves the user information into the list
@@ -12,6 +15,8 @@ def user_instance():
 
     new_user = User(first_name, last_name, username, password)
     new_user.save_user()
+    new_user1.append(new_user)
+
 
 def main():
     print("\n")
@@ -21,7 +26,8 @@ def main():
     choice = int(input("Enter a value:\n"))
 
     while True:
-        if choice == 1 :
+        # User.generate_menu()
+        if choice == 1:
             print("***CREATE AN ACCOUNT***")
             user_instance()
             print("ACCOUNT CREATED!!")
@@ -30,18 +36,24 @@ def main():
             while True:
                 if choice_creation == 1:
                     User.delete_user_account()
+                    # new_user1.remove(new)
                     print("ACCOUNT DELETED SUCCESSFULLY!!")
+                    User.generate_menu()
+                    choice = int(input("Enter a value:\n"))
                     break
                 elif choice_creation == 2:
-                    print("Details of the available users!!")
+                    # print("Details of the available users!!")
                     Creditials.generate_all_saved_accounts()
+                    # User.generate_menu_after_login()
+                    User.generate_menu()
+                    choice = int(input("Enter a value:\n"))
                     break
                 elif choice_creation == 3:
                     User.generate_menu()
                     choice = int(input("Enter a value:\n"))
                     break
 
-        elif choice == 2: 
+        elif choice == 2:
             print("***LOGIN TO THE ACCOUNT***")
             username = input("Enter your username\n")
             password = input("Enter your Your password\n")
@@ -51,21 +63,26 @@ def main():
                     User.generate_menu_after_login()
                     choice_login = int(input("Enter a value:\n"))
                     while True:
-                        if choice_login  == 1:
+                        if choice_login == 1:
                             User.delete_user_account()
                             print("ACCOUNT DELETED SUCCESSFULLY!!\n")
+                            User.generate_menu()
+                            choice = int(input("Enter a value:\n"))
                             break
-                        elif choice_login  == 2:
+                        elif choice_login == 2:
                             print("***YOUR ACCOUNT DATA***")
                             Creditials.generate_all_saved_accounts()
+                            User.generate_menu()
+                            choice = int(input("Enter a value:\n"))
                             break
-                        elif choice_login  == 3:
+                        elif choice_login == 3:
                             User.generate_menu()
                             choice = int(input("Enter a value:\n"))
                             break
 
-                else :
-                    print(f"No such username:({username}) found in the application. Please create an account or check your password!\n")
+                else:
+                    print(
+                        f"No such username:({username}) found in the application. Please create an account or check your password!\n")
                     User.generate_menu()
                     choice = int(input("Enter a value:\n"))
                     break
@@ -74,9 +91,9 @@ def main():
             print("***GET YOUR ACCOUNT DATA***")
             Creditials.generate_all_saved_accounts()
             while True:
-                    User.generate_menu()
-                    choice = int(input("Enter a value:\n"))
-                    break
+                User.generate_menu()
+                choice = int(input("Enter a value:\n"))
+                break
 
         elif choice == 4:
             print("***GET YOUR PASSWORD***")
@@ -84,27 +101,29 @@ def main():
             new_username = Creditials()
             print("Your password: "+new_username.password_generate(username)+"\n")
             while True:
-                    User.generate_menu()
-                    choice = int(input("Enter a value:\n"))
-                    break
+                User.generate_menu()
+                choice = int(input("Enter a value:\n"))
+                break
 
         elif choice == 5:
             print("***ABOUT THE APPLICATION***")
             print("This is a project which run on a terminal, where a user can create an account with a preferred a username. The application can display various saved accounts. And, lastly the user can delete the account.")
             print("\n")
             while True:
-                    User.generate_menu()
-                    choice = int(input("Enter a value:\n"))
-                    break    
+                User.generate_menu()
+                choice = int(input("Enter a value:\n"))
+                break
 
         elif choice == 6:
             print("\n")
-            print("APPLICATION CLOSED...\n***SEE YOU AGAIN***")  
-            exit()    
-        else :
+            print("APPLICATION CLOSED...\n***SEE YOU AGAIN***")
+            exit()
+        else:
             print("###Invalid input...Please check the selection number and try again***")
             User.generate_menu()
             choice = int(input("Enter a value:\n"))
 
 
 main()
+# print(user_instance())
+# print(new_user1)

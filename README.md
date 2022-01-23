@@ -1,7 +1,7 @@
 ## Project Name: Password Locker
 ## Project Description
 This is a project which run on a terminal, where a user can create an account with a preferred a username. The application can display various saved accounts. And, lastly the user can delete the account.
-## Project AUthor : Crispus Njenga
+## Project Author : Crispus Njenga
 ## User Story
 * A user can create an account.
 * A user can login an account using the creditials

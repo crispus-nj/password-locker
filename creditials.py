@@ -47,6 +47,7 @@ class Creditials:
         it will take no arguement
         '''
         for account in User.disply_user_accounts():
+            print("***YOUR ACCOUNT DETAILS***")
             print(f"first name: {account.first_name} \nLast name: {account.last_name} \nUsername: {account.username} \nPassword: {account.password}\n")
 
 
