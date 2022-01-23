@@ -22,10 +22,10 @@ class User:
         '''
         print("1 - Create an Account")
         print("2 - Login to your Account")
-        # print("3 - Display Account Username")
         print("3 - Display Account Details")
         print("4 - Display user password")
         print("5 - About our Application")
+        print("6 - Close Application")
 
     @classmethod
     def generate_menu_after_login(cls):
